@@ -17,6 +17,7 @@ interface Iproducts {
 export const Product: FC<Iproducts> = ({ category }) => {
   const data = [
     {
+      id: "1",
       productName: "Strawberry Banana",
       minPrice: "36",
       maxPrice: "55",
@@ -24,23 +25,26 @@ export const Product: FC<Iproducts> = ({ category }) => {
     },
 
     {
+      id: "2",
       productName: "Milk Chocolate Bar 100mg",
       minPrice: "15",
-      maxPrice: " ",
+      maxPrice: "15",
       image: image2,
     },
 
     {
+      id: "3",
       productName: "Relief pen - 100 doses",
       minPrice: "54",
-      maxPrice: " ",
+      maxPrice: "54",
       image: image3,
     },
 
     {
+      id: "4",
       productName: "Hybrid Top Shelf 3.5 grams",
       minPrice: "49",
-      maxPrice: " ",
+      maxPrice: "49",
       image: image4,
     },
   ];
@@ -63,9 +67,10 @@ export const Product: FC<Iproducts> = ({ category }) => {
                 <img src={p.image} alt="product" />
                 <div className={styles.ProductName}>{p.productName}</div>
                 <div className={styles.ProductPrice}>
-                  {p.maxPrice
-                    ? `${p.minPrice} - ${p.maxPrice}`
-                    : `${p.minPrice}`}
+                  <span key={p.id} />
+                  {p.minPrice === p.maxPrice
+                    ? `$${p.minPrice}`
+                    : `$${p.minPrice} - $${p.maxPrice}`}
                 </div>
               </div>
             ))}

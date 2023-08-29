@@ -11,7 +11,7 @@ interface IRoutes {
   element: string;
 }
 
-const Navigation: FC<IRoutes> = ({ path, element }) => {
+const Navigation: FC<IRoutes> = () => {
   const routes = [
     { path: "/", element: <Home /> },
     { path: "/about", element: <About /> },
@@ -20,7 +20,15 @@ const Navigation: FC<IRoutes> = ({ path, element }) => {
     { path: "/deals", element: <Deal /> },
     { path: "/brands", element: <Brands /> },
   ];
-  return <div></div>;
+  return (
+    <div>
+      {routes.map((r) => (
+        <div>
+          {r.path} {r.element}
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default Navigation;

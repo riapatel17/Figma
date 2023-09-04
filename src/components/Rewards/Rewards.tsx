@@ -10,6 +10,7 @@ import imgPoint from "./images/point.png";
 const Rewards: FC = () => {
   const rewards = [
     {
+      id: "1",
       RewardName: "Reward",
       ProductName: "Strawberry Banana",
       Points: "300",
@@ -18,6 +19,7 @@ const Rewards: FC = () => {
     },
 
     {
+      id: "2",
       RewardName: "Reward",
       ProductName: "Milk Chocolate Bar 100mg",
       Points: "300",
@@ -26,6 +28,7 @@ const Rewards: FC = () => {
     },
 
     {
+      id: "3",
       RewardName: "Dosist",
       ProductName: "Relief pen - 100 doses",
       Points: "300",
@@ -34,6 +37,7 @@ const Rewards: FC = () => {
     },
 
     {
+      id: "4",
       RewardName: "Dosist",
       ProductName: "Relief pen - 100 doses",
       Points: "300",
@@ -52,7 +56,7 @@ const Rewards: FC = () => {
 
       <div className={styles.Rewards}>
         {rewards.map((r) => (
-          <div className={styles.Reward}>
+          <div className={styles.Reward} key={r.id}>
             <img src={r.image} alt="" />
             <div className={styles.RewardText}>
               <h6>{r.RewardName}</h6>

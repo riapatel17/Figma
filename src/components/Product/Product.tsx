@@ -63,11 +63,10 @@ export const Product: FC<Iproducts> = ({ category }) => {
           </div>
           <div className={styles.ProductWrapper}>
             {data.map((p) => (
-              <div className={styles.CategoryCard}>
+              <div className={styles.CategoryCard} key={p.id}>
                 <img src={p.image} alt="product" />
                 <div className={styles.ProductName}>{p.productName}</div>
                 <div className={styles.ProductPrice}>
-                  <span key={p.id} />
                   {p.minPrice === p.maxPrice
                     ? `$${p.minPrice}`
                     : `$${p.minPrice} - $${p.maxPrice}`}

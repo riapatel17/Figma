@@ -8,21 +8,25 @@ import image4 from "./images/image4.png";
 const Blog: FC = () => {
   const data = [
     {
+      id: "1",
       contentText: "Papa & Barkley back in stock along with many options!",
       image: image1,
       btnContent: "Read More",
     },
     {
+      id: "2",
       contentText: "Papa & Barkley back in stock along with many options!",
       image: image2,
       btnContent: "Read More",
     },
     {
+      id: "3",
       contentText: "Papa & Barkley back in stock along with many options!",
       image: image3,
       btnContent: "Read More",
     },
     {
+      id: "4",
       contentText: "Papa & Barkley back in stock along with many options!",
       image: image4,
       btnContent: "Read More",
@@ -38,7 +42,7 @@ const Blog: FC = () => {
           </header>
           <div className={styles.Column}>
             {data.map((d) => (
-              <div className={styles.BlogColumn}>
+              <div className={styles.BlogColumn} key={d.id}>
                 <img
                   src={d.image}
                   alt="image"

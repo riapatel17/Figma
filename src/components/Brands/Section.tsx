@@ -13,7 +13,7 @@ const Section: FC = () => {
   return (
     <div className={styles.SectionWrapper}>
       {data.map((p) => (
-        <div className={styles.brandName}>
+        <div className={styles.brandName} key={p.brandName}>
           <img src={p.image} alt="brand" />
           <div className={styles.brandName}>{p.brandName}</div>
         </div>

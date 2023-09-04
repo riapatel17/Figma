@@ -7,12 +7,14 @@ import imageBogo from "./images/bogo.png";
 const Deals: FC = () => {
   const data = [
     {
+      id: "1",
       DealName: "Spend $100 of Dosist and Get 20% off of Kiva Confections",
       ActiveDeal: "Active everyday",
       imgGroup: imageGroup,
       imgBogo: imageBogo,
     },
     {
+      id: "2",
       DealName: "Spend $100 of Dosist and Get 20% off of Kiva Confections",
       ActiveDeal: "Active everyday",
       imgGroup: imageGroup,
@@ -35,7 +37,7 @@ const Deals: FC = () => {
           <button className={styles.DealsBtn}>SHOP BY DEALS</button>
         </div>
         {data.map((d) => (
-          <>
+          <div key={d.id}>
             <div className={styles.DealBox}>
               <div className={styles.Rec1}></div>
               <div className={styles.Deal1}>
@@ -49,7 +51,7 @@ const Deals: FC = () => {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

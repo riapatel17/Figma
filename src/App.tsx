@@ -7,18 +7,16 @@ import { Reward } from "./pages/Rewards";
 import { Deal } from "./pages/Deals";
 import { Brands } from "./pages/Brands";
 import { Footer } from "./components/Footer/Footer";
+import AllRoutes from "./components/Routes/Navigation";
 
 export function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/rewards" element={<Reward />} />
-          <Route path="/deals" element={<Deal />} />
-          <Route path="/brands" element={<Brands />} />
+          {AllRoutes.map((r) => (
+            <Route path={r.path} element={r.element} />
+          ))}
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -25,18 +25,13 @@
 }
 .Column {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   margin-bottom: 75px;
 }
-.BlogColumn {
-  min-height: 370px;
-  min-width: 300px;
-  margin-right: 25px;
-  background: #fbfbfb;
-}
+
 .ContentImage {
   height: 226px;
-  width: 300px;
+  /* width: 300px; */
 }
 .ContentImage img {
   width: 100%;

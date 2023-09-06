@@ -3,20 +3,25 @@
   height: 551px;
   display: flex;
   align-items: center;
-  gap: 41px;
   justify-content: space-between;
+  margin-top: 50px;
 }
-.SectionWrapper img {
-  width: 414px;
+
+.brandContainer {
   height: 414px;
-  flex-shrink: 0;
+}
+
+.SectionWrapper .brandContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 .brandName {
   color: #211e1e;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.786px;
-  margin-top: 15px;
+  margin-top: 14px;
 }
 .ViewAll {
   color: #211e1e;
@@ -24,12 +29,12 @@
   font-weight: 400;
   letter-spacing: 0.55px;
   opacity: 0.6973;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .SectionBtn {
   width: 206px;
   height: 43px;
-  margin-top: 18px;
+  margin-top: 10px;
   border-radius: 6px;
   border: 1.5px solid #227840;
   background: #227840;
@@ -37,4 +42,8 @@
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.275px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  padding-top: 12px;
 }

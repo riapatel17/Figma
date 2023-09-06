@@ -1,14 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  width: 100%;
-  margin-top: 1px;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 .NavbarContainer {
   display: flex;
   align-items: center;
